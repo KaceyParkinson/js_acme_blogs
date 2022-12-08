@@ -264,6 +264,7 @@ function toggleComments(event, postID){
     if(!event || !postID){
         return;
     }
+    event.target.listener = true;
     const sectionElement = toggleCommentSection(postID);
     const buttonElement = toggleCommentButton(postID);
     const elementArray = [sectionElement, buttonElement];
