@@ -222,7 +222,7 @@ async function displayComments(postID){
     sect.classList.add("hide");
     const comments = await getPostComments(postID);
     const fragment = createComments(comments);
-    sect.append(fragment);
+    sect.appendChild(fragment);
     return sect;
 }
 
@@ -268,6 +268,7 @@ function toggleComments(event, postID){
     const sectionElement = toggleCommentSection(postID);
     const buttonElement = toggleCommentButton(postID);
     const elementArray = [sectionElement, buttonElement];
+    console.log(sectionElement);
     return elementArray;
 }
 
